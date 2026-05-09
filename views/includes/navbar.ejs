@@ -14,10 +14,66 @@
     display:inline;
     margin-right: 0.5rem;
   }
-  .search-inp{
+ .search-inp{
      border-radius: 25px;
-     padding: 0.5rem 5rem 0.5rem 5rem;
-  }
+     padding: 0.5rem 1rem;
+     width: 100%;
+     min-width: 180px;
+
+     /* Listing image */
+.listing-img{
+    height: 20rem;
+    object-fit: cover;
+}
+
+/* Show page image */
+.show-img{
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Review cards */
+.review-card{
+    padding: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px){
+
+    .navbar{
+        height: auto;
+        padding: 1rem;
+    }
+
+    .search-inp{
+        width: 100%;
+    }
+
+    .listing-img{
+        height: 16rem;
+    }
+
+    .show-img{
+        height: 30vh;
+    }
+
+    .btns{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card{
+        margin-bottom: 1rem;
+    }
+
+    .f-info{
+        height: auto;
+        padding: 1rem;
+    }
+}
+}
 
 </style>
 
@@ -34,7 +90,7 @@
       </div>
 
    <div class="navbar-nav ms-auto">
-        <form class="d-flex">
+       <form class="d-flex flex-column flex-md-row gap-2 my-2">
       <input class="form-control me-2 search-inp" type="search" placeholder="Search destination" >
       <button class="btn btn-search " type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
     </form>
