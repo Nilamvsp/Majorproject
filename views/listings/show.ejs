@@ -10,7 +10,7 @@
                     <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing-image">
                     <div class="card-body">
                         <p class="card-text">Owned by : <i>
-                                <%= listing.owner.username %>
+                                   <%= listing.owner ? listing.owner.username : "Anonymous" %>
                             </i></p>
                         <p class="card-text">
                             <%= listing.description %>
